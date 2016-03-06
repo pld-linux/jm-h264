@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	gomp	# OpenMP support
+%bcond_without	openmp	# OpenMP support
 #
 Summary:	H.264/AVC reference software
 Summary(pl.UTF-8):	Referencyjna implementacja H.264/AVC
@@ -12,7 +12,7 @@ Group:		Libraries
 Source0:	http://iphome.hhi.de/suehring/tml/download/jm%{version}.zip
 # Source0-md5:	3bb3ce66316fd9e8ec3d26d88319a6ba
 URL:		http://iphome.hhi.de/suehring/tml/
-%if %{with gomp}
+%if %{with openmp}
 BuildRequires:	gcc-c++ >= 6:4.2
 BuildRequires:	libgomp-devel
 %endif
@@ -34,7 +34,7 @@ Referencyjna implementacja H.264/AVC.
 	CC="%{__cc}" \
 	CXX="%{__cxx}" \
 	OPT_FLAG="%{rpmcflags}" \
-	%{?with_gomp:OPENMP=1}
+	%{?with_openmp:OPENMP=1}
 
 %install
 rm -rf $RPM_BUILD_ROOT
