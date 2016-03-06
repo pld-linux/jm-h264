@@ -5,12 +5,12 @@
 Summary:	H.264/AVC reference software
 Summary(pl.UTF-8):	Referencyjna implementacja H.264/AVC
 Name:		jm-h264
-Version:	18.6
+Version:	19.0
 Release:	0.1
 License:	free (but may require patent license)
 Group:		Libraries
 Source0:	http://iphome.hhi.de/suehring/tml/download/jm%{version}.zip
-# Source0-md5:	3bb3ce66316fd9e8ec3d26d88319a6ba
+# Source0-md5:	322eaa9d350bfce32e27a8000975de35
 URL:		http://iphome.hhi.de/suehring/tml/
 %if %{with openmp}
 BuildRequires:	gcc-c++ >= 6:4.2
